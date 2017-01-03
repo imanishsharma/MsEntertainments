@@ -1,0 +1,55 @@
+﻿@{
+    ViewBag.Title = "MS Entertainment";
+}
+<style>
+    #headimage{margin-left:8px;margin-right:8px;margin-top:0px}
+    #box {background-color:red;margin-left: 8px;margin-right:8px;margin-top:0px;height:35px;font-family:'Comic Sans MS';text-align:left;padding-left:5px;font-size:20px;color:yellow;padding-left:80px;}
+    #movies {margin-left:50px;margin-top:10px;margin-right:50px;margin-bottom:10px;}
+</style>
+<body style ="background-color:ThreeDFace; margin:0px; font-family:Arial, Helvatica,sans-serif;">
+<div>
+    <img  id="headimage" src="~/ms entertainment images/Presentation1.jpg" height="200"width="1260"/>
+    </div>
+    <div id ="box">Book your movie tickets online with special deals!!!
+        @Html.ActionLink("Home", "Index","Home") |
+                  @Html.ActionLink("Upcoming Movies", "UpcomingMovies","Home") |
+                  @Html.ActionLink("About Us", "AboutUs","Home") |
+                  @Html.ActionLink("Contact Us", "ContactUs","Home") |
+                  @Html.ActionLink("Movies", "Index","Movie") |
+                  @Html.ActionLink("Register", "create","Registration")
+    </div>
+    <div id ="movies">
+        <table style ="width:100%;"border="0"><tr><td>&nbsp;</td>
+            <td style ="background-color:lightgoldenrodyellow" ><table style="width:98%;"border="0">
+                <tr>
+                    <td style="vertical-align:top;">
+                        <table border="0" style="  margin-left:auto;margin-right:auto;">
+  <tr><td style="color:#003876;font-weight:bold;padding:10px">Now Showing</td></tr>
+                <tr><td style="padding:10px"><img src="~/ms entertainment images/ghayal.jpg" width="185"height="229" /></td>
+                    <td style="padding:10px"><img src="~/ms entertainment images/chalk nd duster.jpg"width="185"height="229" /></td>
+                    <td style="padding:10px"><img src="~/ms entertainment images/the nut job.JPG"width="185"height="229" /></td>
+                    <td style="padding:10px"><img src="~/ms entertainment images/airlift.jpg"width="185"height="229" /></td>
+                    </tr>                              
+                    </table>
+                <table style ="margin-left:auto;margin-right:auto"border="0">
+                    <tr><td style ="color:#003876;font-weight:bold;padding:10px">Coming Soon</td></tr>
+                    <tr>
+                        <td style="padding:10px"><img src="~/ms entertainment images/fittoor.jpg"width="185"height="229" /></td>
+                        <td style ="padding:10px"><img src="~/ms entertainment images/sanam re.jpg"width="185"height="229" /></td>
+                        <td style="padding:10px"><img src="~/ms entertainment images/neerja.jpg"width="185"height="229" /></td>
+                        <td style="padding:10px"><img src="~/ms entertainment images/jai gangaajal.jpg"width="185"height="229" /></td>
+                        </tr>
+                    </table>
+                        <P>&nbsp;</p></td>
+                    <td style="width:225px;text-align:left;vertical-align:top;background-color:#fef814"><p><img src="~/ms entertainment images/20160206224739.jpg" width="225"height="268"/></p>
+                    @Html.Partial("_partial")</td>
+            </tr>
+            </table></td>
+        <td>&nbsp;</td>
+        
+        </tr>
+           <tr><td style="width:10%">&nbsp;</td><td style="text-align:right;font-size:11px;">&copy;2015 MS Entertainment. All rights reserved.</td></tr>
+            <tr><td style="width:10%">&nbsp;</td></tr>
+    </table></div>
+    </body>
+    

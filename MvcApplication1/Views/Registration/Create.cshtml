@@ -1,0 +1,138 @@
+﻿<style>
+    #headimage{margin-left:8px;margin-right:8px;margin-top:0px}
+    #box {background-color:red;margin-left: 8px;margin-right:8px;margin-top:0px;height:35px;font-family:'Comic Sans MS';text-align:left;padding-left:5px;font-size:20px;color:yellow;padding-left:80px;}
+    #movies {margin-left:50px;margin-top:10px;margin-right:50px;margin-bottom:10px;}
+</style>
+<body style ="background-color:ThreeDFace; margin:0px; font-family:Arial, Helvatica,sans-serif;">
+<div>
+    <img  id="headimage" src="~/ms entertainment images/Presentation1.jpg" height="200"width="1260"/>
+    </div>
+    <div id ="box">Book your movie tickets online with special deals!!!
+        @Html.ActionLink("Home", "Index","Home") |
+                  @Html.ActionLink("Upcoming Movies", "UpcomingMovies","Home") |
+                  @Html.ActionLink("About Us", "AboutUs","Home") |
+                  @Html.ActionLink("Contact Us", "ContactUs","Home") |
+                  @Html.ActionLink("Movies", "Index","Movie") |
+                  @Html.ActionLink("Register", "create","Registration")
+    </div>
+ <div id ="movies">
+        <table style ="width:100%;"border="0"><tr><td>&nbsp;</td>
+            <td style ="background-color:lightgoldenrodyellow"><table style="width:98%;"border="0">
+                <tr>
+                    <td style="vertical-align:top;">
+                        <article>
+
+
+
+
+@model MvcApplication1.Models.Customer
+
+@{
+    ViewBag.Title = "Registration Page";
+}
+
+<h2>Registration Page</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(false)
+
+    <fieldset>
+        <legend>Customer</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Customer_Name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Customer_Name)
+            @Html.ValidationMessageFor(model => model.Customer_Name,"*")
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Age)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Age)
+            @Html.ValidationMessageFor(model => model.Age,"*")
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Gender)
+        </div>
+        <div class="editor-field">
+            Male @Html.RadioButtonFor(model => model.Gender, "Male")
+            Female @Html.RadioButtonFor(model => model.Gender, "Female")
+            @Html.ValidationMessageFor(model => model.Gender,"*")
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Email)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Email)
+            @Html.ValidationMessageFor(model => model.Email,"*")
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Password)
+        </div>
+        <div class="editor-field">
+            @Html.PasswordFor(model => model.Password)
+            @Html.ValidationMessageFor(model => model.Password,"*")
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Confirm_Password)
+        </div>
+        <div class="editor-field">
+            @Html.PasswordFor(model => model.Confirm_Password)
+            @Html.ValidationMessageFor(model => model.Confirm_Password,"*")
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Address)
+        </div>
+        <div class="editor-field">
+            @Html.TextAreaFor(model => model.Address)
+            @Html.ValidationMessageFor(model => model.Address,"*")
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Phone_Number)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Phone_Number)
+            @Html.ValidationMessageFor(model => model.Phone_Number,"*")
+        </div>
+
+        <div class="editor-label">
+            Subscribe to our monthly newsletter
+        </div>
+        <div class="editor-field">
+            
+            @Html.CheckBoxFor(model => model.Subscription)
+            @Html.ValidationMessageFor(model => model.Subscription)
+        </div>
+
+        <p>
+            <input type="submit" value="Register" />
+        </p>
+    </fieldset>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+ </article>
+        <td style="width:225px;text-align:left;vertical-align:top;background-color:#fef814"><p><img src="~/ms entertainment images/20160206224739.jpg" width="225"height="268"/></p>
+                    @Html.Partial("_partial")</td>
+            
+                </tr>
+            </table></td><td>&nbsp;</td>
+        
+        </tr>
+           <tr><td style="width:10%">&nbsp;</td><td style="text-align:right;font-size:11px;">&copy;2015 MS Entertainment. All rights reserved.</td></tr>
+            <tr><td style="width:10%">&nbsp;</td></tr>
+    </table></div>
+    </body>
+
+
